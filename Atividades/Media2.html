@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar</title>
+    <style>
+    body {
+         background-color: rgb(168, 245, 255);
+         color: rgb(0, 0, 0);
+         font: normal 20pt Arial;
+
+
+    } 
+
+    </style>
+</head>
+<body>
+   <center> <h2> Média do ano letivo</h2> </center>
+<script>
+var nome = window.prompt("Digite seu nome?");
+const n1 = Number.parseFloat(window.prompt("Digite sua primeira nota."));
+const n2 = Number.parseFloat(window.prompt("Dgite sua segunda nota"));
+const n3 = Number.parseFloat(window.prompt("Digite sua terceira nota"));
+var m = (n1 + n2 + n3)/3
+var média = m.toFixed(2)//fiz isso para que a média ficasse com duas casas decimais
+document.write(`${nome} sua média é de <strong>${média}<strong/>!<div/>`);
+     if (média>=7){
+     document.write("Parabéns, você foi APROVADO!");
+     }
+     else if (média>=5 && média<7){
+         document.write("Não atingiu a média , você vai fazer recuperação!");
+        //<center> colocar escrita no meio da tela
+     }
+     else {
+          document.write("Infelizmente, você foi reprovado");
+     }
+
+
+
+
+
+</script>
+    
+</body>
+</html>

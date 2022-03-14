@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        body{
+        background: rgb(169, 238, 255);
+        font: normal 25pt italic;
+        color:black;
+          }
+          input {
+              font: normal 18pt italic;
+              width: 100px;
+              text-align: center;
+          }
+    </style>
+</head>
+<body>
+    <h1><center>Somando valores</center></h1> 
+    <input type="number" name="txtn1"id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id = "res" id = "ap" id="rp"></div>
+    
+  <script>
+       function somar(){
+            var tx1 = window.document.getElementById("txtn1")
+            var tx2 = window.document.getElementById("txtn2")
+            var res = window.document.getElementById("res")
+            var n1 = Number(tx1.value)
+            var n2 = Number(tx2.value)
+            var t = n1 + n2
+            //input é para colocar um botao
+            
+            
+            
+         if (t>50) {
+             var apro = window.document.getElementById("ap")
+             apro="Aprovado"
+             res.innerHTML=`Sua nota foi ${t}, ${apro}`
+             res.style.textAlign="center"
+             res.style.background="green"
+            }     
+         else 
+         {
+            var repro = window.document.getElementById("rp")
+             repro="Reprovado"
+             res.innerHTML=`Sua nota foi ${t}, ${repro}` 
+             res.style.textAlign="center"
+             res.style.background="red"
+        
+        }
+    
+       }
+
+  </script>
+</body>
+</html>

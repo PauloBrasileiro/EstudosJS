@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigos</title>
+    <style>
+       body {
+         background: rgb(166, 249, 255);
+        font: normal 25pt arial;
+        color: rgb(255, 0, 221);
+       }
+        input {
+        background: rgb(255, 255, 255);
+        font: normal 25pt italic;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        
+        }
+    </style>
+</head>
+<body>
+    <h2><center><strong>Qual seu nome?</strong></center></h2>
+    <input type="text" name="name" id="name" placeholder="Digite seu nome">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id = "res"></div>
+     <script>
+         function clicar(){
+             var name = document.getElementById("name")     
+             var nome = name.value
+             var res = document.querySelector("div#res")
+        if(nome == "Andre"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+
+        }
+        else if(nome == "andre"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+        }
+        else if(nome == "andré"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+        }
+        else if(nome == "André"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+        }
+        else if(nome == "enrico"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+        }
+        else if(nome == "Enrico"){
+            res.innerHTML = `<p>Seu nome é ${nome} e você é <strong>GAY</strong></p>`
+        }
+        else{
+            res.innerHTML += "<p>Continua sendo <strong>GAY</strong></p>"
+        }
+
+             
+         
+         
+         }
+
+     </script>
+</body>
+</html>

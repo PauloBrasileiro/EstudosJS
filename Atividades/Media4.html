@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média escolar</title>
+    <style>
+        body{
+          background: rgb(147, 251, 255);
+          font: normal 25pt arial;
+          color: rgb(0, 0, 0);
+        }
+        div#res{
+            margin-top: 100px;
+            font: normal 25pt arial;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h2><Center>Sua média escolar</Center></h2>
+    <form action="">
+       <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+       <input type="submit" id = "send" value="Enviar">
+        <!--Input para colocar nome e bota para enviar nome-->
+       </form>
+    <input type="number" name="txt1" id="txt1" placeholder="Sua primeira nota">
+    <input type="number" name="txt2" id="txt2" placeholder="Sua segunda nota">
+    <input type="number" name="txt3" id="txt3" placeholder="Sua terceira nota">
+    <input type="number" name="txt4" id="txt4" placeholder="Sua quarta nota">
+    <input type="button" value="somar" onclick="somar()">
+    <div id = "res">Resultado</div>
+    <script>
+            
+             //para guardar o nome 
+             
+                const btn = document.getElementById("send");
+                  
+                  btn.addEventListener("click",function(e){
+                      e.preventDefault();
+    
+                      const name = document.querySelector("#nome");
+                      const value = name.value;
+                      console.log(value);
+                      //Esse esquema é para guardar o nome no formulario
+                      //com botao e input
+                    })
+            function somar(){  
+              var tn1 = document.getElementById("txt1");         
+              var tn2 = document.getElementById("txt2");
+              var tn3 = document.getElementById("txt3");
+              var tn4 = document.getElementById("txt4");
+                 var res = document.getElementById("res");
+                  var n1 = Number(tn1.value);
+                  var n2 = Number(tn2.value);
+                  var n3 = Number(tn3.value);
+                  var n4 = Number(tn4.value);
+             var media = (n1+n2+n3+n4)/4;
+             var m = media.toFixed(2);
+        if(m>=7){
+            res.innerHTML = `Sua nota foi ${m}, você foi <strong>Aprovado</strong>`
+        
+        }
+        else if(m<=6 && m>=5){
+            res.innerHTML = `Sua nota foi ${m}, você vai fazer <strong>Recuperação</strong>`
+        }
+        else{
+            res.innerHTML = `Sua nota foi ${m}, você foi <strong>Reprovado</strong>`
+        }
+   
+   
+   
+    }
+    
+
+    </script>
+</body>
+</html>
