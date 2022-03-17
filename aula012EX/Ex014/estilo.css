@@ -15,13 +15,17 @@ section{
     background: white;
     border-radius: 10px; /*É para arredondar as bordas*/
     padding: 15px; /*da um espaço dentro*/
-    text-align: center;
     width: 500px; /*largura do box*/
-    height: 500px;
+    height: 320px;
     margin: auto;/*coloca o box no centro da pagina*/
     box-shadow:4px 4px 10px rgba(0, 0, 0, 0.411) ;
 /*Para criar uma sombra mo box, 1ºN lateral,2ºN vvertical, 3ºN espalhamento e a cor */
     
+}
+
+div{
+    text-align: center;
+    padding: 8px;
 }
 
 footer{
