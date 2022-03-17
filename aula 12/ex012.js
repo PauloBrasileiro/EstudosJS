@@ -1,4 +1,4 @@
-var agora = new Date
+var agora = new Date()
 var hora = agora.getHours()
 // Ele pega tanto horas, como datas atual
 console.log(`São ${hora} horas`)
